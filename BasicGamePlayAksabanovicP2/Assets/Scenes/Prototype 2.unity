@@ -492,7 +492,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 45
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -663,6 +663,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8403040028220983007, guid: 9ea6f943a07ff6948bcb5bda962b644a, type: 3}
   m_PrefabInstance: {fileID: 8403040026575170059}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1824528934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824528936}
+  - component: {fileID: 1824528935}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1824528935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824528934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01b6cc5f96ef947865acc55152fbd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 5162343756974043494, guid: 54c586a3344e05a4e8b26d3023afec7b, type: 3}
+  - {fileID: 7966965258108555015, guid: 3d6182f569127cb42bc28a7c62298f56, type: 3}
+  - {fileID: 8403040028220983007, guid: 9ea6f943a07ff6948bcb5bda962b644a, type: 3}
+--- !u!4 &1824528936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824528934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3468056, y: -21.2224, z: 51.34047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881294706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6f52b946693e54048af74f5cd6ba49f8, type: 3}
@@ -681,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: -1
-  speed: 10
+  speed: 15
   xRange: 15
   projectilePrefab: {fileID: 7412705047768534089, guid: 1ea21e1f609442a4b93aaa47348d701e, type: 3}
 --- !u!114 &1927954926
