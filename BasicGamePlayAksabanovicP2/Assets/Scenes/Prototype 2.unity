@@ -706,10 +706,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7235b72d09d72249bda1864924344f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: -1
-  speed: 15
+  speed: 25
   xRange: 15
+  zTop: 14
+  zBottom: 0
   projectilePrefab: {fileID: 7412705047768534089, guid: 1ea21e1f609442a4b93aaa47348d701e, type: 3}
+--- !u!114 &1881294710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881294706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b709c9b33e3fd240994ac928e3b8486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &2111777536
 LightingSettings:
   m_ObjectHideFlags: 0

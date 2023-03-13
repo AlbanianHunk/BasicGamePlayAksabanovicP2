@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 10.0f;
-
+    private float horizontalInput;
+    private float verticalInput;
+    public float speed = 35.0f;
+    public float xRange = 22.0f;
+    public float zTop = 14.0f;
+    public float zBottom = 0.0f;
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Keep the player in bounds
+        //That if sections keep player in bounds
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -28,13 +30,27 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
+
+        if (transform.position.z > zTop)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zTop);
+        }
+        if (transform.position.z < zBottom)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zBottom);
+        }
+
         horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        transform.Translate(horizontalInput * speed * Time.deltaTime * Vector3.right);
+
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(verticalInput * speed * Time.deltaTime * Vector3.forward);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Launch a projectile from the player
+            //Press that button to lauch a projectile
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+
     }
 }
